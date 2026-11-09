@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smart Way To Earn — অনলাইন কাজ, ডিজিটাল রিসোর্স ও শেখার গাইড।">
+  <title>Smart Way To Earn | Learn • Explore • Grow</title>
+  <style>
+    :root{
+      --bg:#07111f; --panel:#101f33; --panel2:#132740; --text:#eef5ff;
+      --muted:#a8b8cc; --brand:#49d6b3; --brand2:#6c8cff; --line:rgba(255,255,255,.1);
+      --shadow:0 18px 50px rgba(0,0,0,.28);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(7,17,31,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .logo{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.2px}
+    .logo-mark{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#07111f;font-weight:900;font-size:20px}
+    .logo span:last-child{font-size:16px}
+    nav{display:flex;align-items:center;gap:26px;color:var(--muted);font-size:14px}
+    nav a:hover{color:var(--brand)}
+    .menu-btn{display:none;border:1px solid var(--line);background:var(--panel);color:var(--text);padding:8px 12px;border-radius:10px;font-size:20px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:12px;font-weight:750;border:1px solid transparent;transition:.2s;cursor:pointer}
+    .btn-primary{background:linear-gradient(120deg,var(--brand),#80e7ce);color:#06131d;box-shadow:0 10px 28px rgba(73,214,179,.18)}
+    .btn-primary:hover{transform:translateY(-2px);filter:brightness(1.05)}
+    .btn-outline{border-color:var(--line);background:rgba(255,255,255,.03);color:var(--text)}
+    .btn-outline:hover{border-color:var(--brand);color:var(--brand)}
+    .hero{padding:92px 0 82px;position:relative;overflow:hidden}
+    .hero:before{content:"";position:absolute;width:480px;height:480px;border-radius:50%;background:rgba(73,214,179,.12);filter:blur(90px);right:-100px;top:-100px;pointer-events:none}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:55px;position:relative}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;color:var(--brand);font-size:13px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;background:rgba(73,214,179,.09);border:1px solid rgba(73,214,179,.2);padding:7px 12px;border-radius:99px}
+    h1{font-size:clamp(38px,6vw,66px);line-height:1.12;letter-spacing:-1.8px;margin:22px 0}
+    h1 em{font-style:normal;color:var(--brand)}
+    .hero p{color:var(--muted);font-size:17px;max-width:610px}
+    .hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+    .visual{min-height:360px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(145deg,rgba(19,39,64,.96),rgba(12,27,45,.92));box-shadow:var(--shadow);padding:25px;position:relative;overflow:hidden}
+    .visual:after{content:"";position:absolute;width:210px;height:210px;border-radius:50%;background:rgba(108,140,255,.18);filter:blur(45px);right:-55px;bottom:-70px}
+    .visual-top{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}
+    .dots{display:flex;gap:5px}.dots i{width:7px;height:7px;border-radius:50%;background:#6f829a}
+    .growth-card{position:relative;z-index:1;margin-top:30px;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:20px;padding:22px}
+    .growth-card small{color:var(--muted)}
+    .growth-card h2{font-size:28px;margin:5px 0 15px}
+    .bars{height:115px;display:flex;align-items:end;gap:10px}
+    .bars span{flex:1;border-radius:8px 8px 3px 3px;background:linear-gradient(180deg,var(--brand),var(--brand2));opacity:.9}
+    .bars span:nth-child(1){height:30%}.bars span:nth-child(2){height:45%}.bars span:nth-child(3){height:38%}.bars span:nth-child(4){height:65%}.bars span:nth-child(5){height:57%}.bars span:nth-child(6){height:82%}.bars span:nth-child(7){height:100%}
+    section{padding:76px 0}
+    .section-head{text-align:center;max-width:680px;margin:0 auto 38px}
+    .section-head .eyebrow{margin-bottom:12px}
+    h2.section-title{font-size:clamp(28px,4vw,42px);line-height:1.2;margin-bottom:12px}
+    .section-head p{color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:19px;padding:25px;transition:.25s}
+    .card:hover{transform:translateY(-5px);border-color:rgba(73,214,179,.45)}
+    .icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:rgba(73,214,179,.12);color:var(--brand);font-size:22px;margin-bottom:18px}
+    .card h3{font-size:19px;margin-bottom:8px}
+    .card p{color:var(--muted);font-size:14px}
+    .about{background:linear-gradient(180deg,transparent,rgba(19,39,64,.45),transparent)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+    .about-copy h2{font-size:clamp(29px,4vw,42px);line-height:1.2;margin:15px 0}
+    .about-copy p{color:var(--muted);margin-bottom:17px}
+    .checks{display:grid;gap:12px;margin-top:22px}
+    .checks div{display:flex;gap:10px;align-items:flex-start;color:#dbe7f5}
+    .checks b{color:var(--brand)}
+    .about-panel{padding:30px;border:1px solid var(--line);border-radius:24px;background:var(--panel);box-shadow:var(--shadow)}
+    .about-panel h3{font-size:22px;margin-bottom:15px}
+    .stat{padding:16px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:15px}
+    .stat:last-child{border:0}.stat span{color:var(--muted)}.stat strong{color:var(--brand)}
+    .cta{padding:48px;border-radius:26px;background:linear-gradient(115deg,#143e45,#1c3158);border:1px solid rgba(73,214,179,.25);display:flex;justify-content:space-between;align-items:center;gap:25px}
+    .cta h2{font-size:clamp(25px,4vw,36px);line-height:1.2;margin-bottom:8px}
+    .cta p{color:#c0d2e2}
+    .contact-card{max-width:720px;margin:auto;background:var(--panel);border:1px solid var(--line);padding:30px;border-radius:22px;text-align:center}
+    .contact-card p{color:var(--muted);margin:10px 0 22px}
+    footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:13px}
+    .footer-row{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .disclaimer{font-size:12px;color:#91a4ba;margin-top:15px}
+    @media(max-width:800px){
+      nav{display:none;position:absolute;top:76px;left:0;right:0;padding:18px 4%;background:#0b1929;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:16px}
+      nav.open{display:flex}.menu-btn{display:block}.nav>.btn{display:none}
+      .hero{padding:65px 0}.hero-grid,.about-grid{grid-template-columns:1fr;gap:30px}
+      .visual{min-height:310px}.cards{grid-template-columns:1fr}
+      section{padding:60px 0}.cta{padding:30px;align-items:flex-start;flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="#home"><span class="logo-mark">S</span><span>Smart Way To Earn</span></a>
+      <nav id="navLinks">
+        <a href="#home">হোম</a><a href="#about">আমাদের সম্পর্কে</a><a href="#services">সার্ভিস</a><a href="#contact">যোগাযোগ</a>
+      </nav>
+      <a class="btn btn-primary" href="https://t.me/+0OdAAynHbwEyYmNl" target="_blank" rel="noopener">Telegram-এ যোগ দিন ↗</a>
+      <button class="menu-btn" id="menuBtn" aria-label="মেনু খুলুন">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">✦ Learn • Explore • Grow</span>
+          <h1>আপনার ডিজিটাল যাত্রা শুরু হোক <em>স্মার্টভাবে।</em></h1>
+          <p>Smart Way To Earn-এ স্বাগতম। অনলাইন কাজ সম্পর্কে জানুন, দরকারি ডিজিটাল রিসোর্স খুঁজে নিন এবং নতুন দক্ষতা শেখার পথে এগিয়ে যান—নিজের সময় ও সামর্থ্য অনুযায়ী।</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#services">আমাদের সার্ভিস দেখুন</a>
+            <a class="btn btn-outline" href="https://t.me/+0OdAAynHbwEyYmNl" target="_blank" rel="noopener">Telegram Channel ↗</a>
+          </div>
+        </div>
+        <div class="visual" aria-label="ডিজিটাল গ্রোথের ইলাস্ট্রেশন">
+          <div class="visual-top"><span>YOUR DIGITAL JOURNEY</span><span class="dots"><i></i><i></i><i></i></span></div>
+          <div class="growth-card">
+            <small>শেখা ও দক্ষতা উন্নয়নের অগ্রযাত্রা</small>
+            <h2>Think Smart. Grow Better.</h2>
+            <div class="bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          </div>
+          <p style="position:relative;z-index:1;color:#b8c9dc;font-size:13px;margin-top:18px">প্রতিটি নতুন দক্ষতা হতে পারে নতুন সম্ভাবনার শুরু।</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">What We Share</span>
+          <h2 class="section-title">আমাদের সার্ভিস ও রিসোর্স</h2>
+          <p>অনলাইন জগতে শেখা ও কাজের সুযোগ খুঁজতে সহায়ক কিছু তথ্য ও রিসোর্স।</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="icon">🌐</div><h3>অনলাইন রিসোর্স</h3><p>বিভিন্ন অনলাইন প্ল্যাটফর্ম ও দরকারি ওয়েবসাইট সম্পর্কে পরিচিতি এবং ব্যবহারবিষয়ক তথ্য।</p></article>
+          <article class="card"><div class="icon">📚</div><h3>লার্নিং গাইড</h3><p>ডিজিটাল দক্ষতা, অনলাইন কাজ এবং নিরাপদে ইন্টারনেট ব্যবহারের প্রাথমিক গাইড।</p></article>
+          <article class="card"><div class="icon">📢</div><h3>আপডেট ও টিপস</h3><p>নতুন রিসোর্স, গুরুত্বপূর্ণ আপডেট এবং কাজের প্রস্তুতি নিয়ে নিয়মিত তথ্য।</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="wrap about-grid">
+        <div class="about-copy">
+          <span class="eyebrow">About Us</span>
+          <h2>Smart Way To Earn — শেখা, জানা ও এগিয়ে যাওয়ার জায়গা।</h2>
+          <p>আমাদের লক্ষ্য হলো অনলাইন কাজ ও ডিজিটাল রিসোর্স সম্পর্কে সহজ ভাষায় তথ্য তুলে ধরা, যাতে নতুনরাও বুঝে-শুনে সিদ্ধান্ত নিতে পারে।</p>
+          <div class="checks">
+            <div><b>✓</b><span>সহজ ভাষায় তথ্য ও নির্দেশনা</span></div>
+            <div><b>✓</b><span>রিসোর্স ব্যবহারের আগে যাচাই করার পরামর্শ</span></div>
+            <div><b>✓</b><span>বাস্তবসম্মত প্রত্যাশা ও নিরাপদ অনলাইন অভ্যাস</span></div>
+          </div>
+        </div>
+        <div class="about-panel">
+          <h3>আমাদের মূলনীতি</h3>
+          <div class="stat"><span>স্বচ্ছতা</span><strong>সবার আগে</strong></div>
+          <div class="stat"><span>শেখা</span><strong>প্রতিদিন</strong></div>
+          <div class="stat"><span>নিরাপত্তা</span><strong>গুরুত্বপূর্ণ</strong></div>
+          <p class="disclaimer">কোনো আয় নিশ্চিত নয়। অনলাইন কাজের ফলাফল দক্ষতা, সময়, প্ল্যাটফর্মের নিয়ম এবং অন্যান্য বিষয়ের ওপর নির্ভর করে। কোনো সাইটে যোগ দেওয়ার আগে নিজে যাচাই করুন।</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="cta">
+          <div><h2>আমাদের কমিউনিটিতে যুক্ত হোন</h2><p>নতুন রিসোর্স ও আপডেট পেতে Telegram চ্যানেলে যোগ দিন।</p></div>
+          <a class="btn btn-primary" href="https://t.me/+0OdAAynHbwEyYmNl" target="_blank" rel="noopener">Join Telegram ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-head"><span class="eyebrow">Contact</span><h2 class="section-title">যোগাযোগ করুন</h2><p>প্রশ্ন বা পরামর্শ থাকলে Telegram-এর মাধ্যমে যোগাযোগ করতে পারেন।</p></div>
+        <div class="contact-card">
+          <div class="icon" style="margin:0 auto 12px">✉</div>
+          <h3>Smart Way To Earn</h3>
+          <p>আমাদের Telegram কমিউনিটিতে মেসেজ দিন অথবা চ্যানেলে যুক্ত হোন।</p>
+          <a class="btn btn-primary" href="https://t.me/+0OdAAynHbwEyYmNl" target="_blank" rel="noopener">Telegram-এ যোগাযোগ ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>© <span id="year"></span> Smart Way To Earn. All rights reserved.</span>
+      <span>Made for learning and growth.</span>
+    </div>
+  </footer>
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('open')));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
